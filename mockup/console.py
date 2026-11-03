@@ -1,12 +1,17 @@
-import editor
+# console module
+# it's purpose is to be an interface to work with the console input/output
+# the abstraction should provide a connection to carry over read text into graphical output
+
+# yes, I keep refering to these as "classes" even though they are modules
+
+# in proper gui module, this should initialise the main window
+def Initialise():
+  print("Hello Console")
+
+def Terminate():
+  print("Bye Console")
 
 class Console:
-  def ReadInput():
-    pass
-
-  def WriteOutput():
-    pass
-
   def CheckCommand():
     pass
 
@@ -29,18 +34,3 @@ class Console:
         case 'open': pass
         case 'close': pass
         case _: print('Unknown command')
-
-# Console.Main()
-"""
-B = 'Hello World!'
-
-with open('test.txt') as f:
-  A = f.read()
-  print(A)
-
-with open('test.txt', 'w') as f:
-  f.write(B)
-"""
-
-editor.Editor.ReadFrom("test.txt")
-print(editor.Editor.GetContents())
